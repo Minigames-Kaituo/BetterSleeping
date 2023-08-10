@@ -122,7 +122,8 @@ public class BetterSleeping extends JavaPlugin implements IReloadable
         {
             try
             {
-                Class.forName("me.gsit.api.events.PlayerPoseEvent");
+                Class.forName("dev.geco.gsit.api.event.PlayerPoseEvent");
+                Class.forName("dev.geco.gsit.api.event.PlayerGetUpPoseEvent");
                 this.getServer().getPluginManager().registerEvents(injector.getInstance(GSitListener.class), this);
             }
             catch (ClassNotFoundException ignored)
